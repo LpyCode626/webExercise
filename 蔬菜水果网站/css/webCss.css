@@ -1,0 +1,366 @@
+
+
+/***********************通栏开始**************************/
+/*通栏背景*/
+.headline {
+	height: 37px;
+	background-color: #F7F7F7;
+	border-bottom: 1px solid #DDDDDD;
+}
+/*通栏版心*/
+.top {
+	width: 1200px;
+	height: 37px;
+	margin: 0 auto;
+}
+
+/*欢迎词*/
+.topPage_l {
+	line-height: 37px;
+}
+
+/*超链接*/
+.topPage_r ul li {
+	display: inline-block;
+}
+
+.topPage_r ul>a{	
+	color: red;
+}
+
+.topPage_r ul li a{	
+	border-left: 1px solid #727176;
+	margin-left: 15px;
+	padding-left: 15px;
+	line-height: 37px;
+}
+/*超链接结束*/
+
+/***********************通栏开始**************************/
+
+/***********************logo开始**************************/
+
+/*头部*/
+.mainHead {
+	width: 1200px;
+	height: 145px;
+	margin: 0 auto;
+}
+
+/*logo图片*/
+.logoPic {
+	margin-top: 42px;
+}
+
+/*search*/
+.search {
+	height: 50px;
+	margin-top: 50px;
+	margin-left: 120px;
+}
+
+/*搜索文本框*/
+.search .txt {
+	width: 450px;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid #37ab40;
+	background: url(../images/search.png) no-repeat 12px 15px;
+	padding-left: 40px;
+	font-size: 20px;
+}
+/*搜索按钮*/
+.search .btn {
+	width: 70px;
+	height: 52px;
+	line-height: 50px;
+	background-color: #37ab40;
+	color: white;
+	font-size: 18px;
+	border: 1px solid #37ab40;
+	float: right;
+}
+
+/*购物车*/
+.shoppingCat {
+	height: 50px;
+	margin-top: 50px;
+	
+}
+
+/*购物车链接*/
+.shoppingCat a {
+	height: 50px;
+	width: 100px;
+	line-height: 50px;
+	background: url(../images/buycar.png) no-repeat 6px 13px;
+	padding-left: 40px;
+	display: inline-block;
+	font-size: 18px;
+	border: 1px solid #DDDDDD;
+}
+
+/*购物车数量*/
+.shoppingCat span {
+	/*要设置行内元素的宽高，改变现实模式*/
+	display: inline-block;
+	
+	/*宽高及背景*/
+	height: 52px;
+	width: 50px;
+	background-color: #FF8800;
+
+	/*字体相关，字体大小，颜色，居中*/
+	font-size: 18px;
+	color: white;
+	text-align: center;
+	line-height: 52px;
+
+	/*消除空格*/
+	float: right;
+}
+/***********************logo结束**************************/
+
+
+
+/***********************导航开始**************************/
+/*标题背景*/
+.navTitle {
+	border-bottom: 2px solid #37AB40;
+}
+
+/*标题版心*/
+.navM {
+	width: 1200px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+/*所有商品*/
+.navAll {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	background: #37AB40;
+
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	
+}
+
+/*标题超链接导航*/
+
+.navList ul li {
+	display: inline-block;
+}
+.navList ul li a {
+	line-height: 50px;
+
+	border-left: 1px solid black;
+	margin-left: 28px;
+	padding-left: 28px;
+
+	font-size: 18px;
+}
+.navList ul li:first-child a {
+	border: none;
+}
+
+
+
+/*轮播图主体*/
+.nav {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/*侧边栏*/
+.sidebar ul li {
+	width: 198px;
+	height: 43px;
+	border: 1px solid #F7F7F7;
+
+	background: url(../images/sprite.png) no-repeat 20px 14px;
+
+	font-size: 18px;
+	line-height: 43px;
+	text-align: center;
+}
+
+/* 雪碧图位置设置采用 nth选择器 */
+.sidebar li:nth-child(2){
+background-position-y: -40px;
+}
+.sidebar li:nth-child(3){
+background-position-y: -90px;
+}
+.sidebar li:nth-child(4){
+background-position-y: -140px;
+}
+.sidebar li:nth-child(5){
+background-position-y: -190px;
+}
+.sidebar li:nth-child(6){
+background-position-y: -240px;
+}
+
+/*雪碧图选择箭头*/
+.sidebar ul a {
+	background: url(../images/sprite.png) no-repeat 150px -287px;
+	display: inline-block;
+	float: right;
+	width: 200px;
+	height: 43px;
+}
+
+
+
+
+
+/*图片轮播*/
+.slidePic {
+	width: 760px;
+	height: 270px;
+	overflow: hidden;
+	position: relative;
+}
+
+/*图片轮播div宽度，并排展示*/
+.sList {
+width:3040px;
+height:270px;
+}
+.sList li{
+	float: left;
+}
+
+/*左按钮*/
+.lBtn {
+	position: absolute;
+
+	width:25px;
+	height: 25px;
+	background: url(../images/sprite.png) no-repeat 0px -350px;
+
+	bottom:124px;
+	left: 12px;
+	cursor: pointer;
+}
+/*右按钮*/
+.rBtn {
+	position: absolute;
+
+	width:25px;
+	height: 25px;
+	background: url(../images/sprite.png) no-repeat 0px -400px;
+
+	bottom:124px;
+	right: 12px;
+	cursor: pointer;
+}
+
+/*小圆点*/
+.rd{
+height: 11px;
+width:760px;
+position: absolute;
+bottom:19px;
+left:0;
+text-align: center;
+}
+
+.rd li{
+width:11px;
+height: 11px;
+/* background: red; */
+border-radius: 50%;
+background-color:rgba(0,0,0,0.2);
+
+/* 注：不适用浮动，因为浮动不能居中 */
+/* float:left; */
+display: inline-block;
+}
+
+/*选择小圆点事件*/
+.rd .active{
+background: greenyellow;
+}
+
+
+/*右边图片*/
+.rPic {
+	font-size: 0;
+	width: 240px;
+}
+.rpic a {
+	float: left;
+}
+
+/***********************导航结束**************************/
+
+
+
+/***********************产品列表开始**************************/
+.productList {
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.pTitle {
+	width: 1200px;
+	border-bottom: 2px solid #37AB40;
+	margin: 0 auto;
+	overflow: hidden;
+	
+}
+
+.pName {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+
+	font-size: 20px;
+	text-align: center;
+	color: #37AB40;
+}
+
+.pNameList ul li {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+
+.pNameList a {
+	padding-left: 15px;
+}
+.pNameList ul li:first-child a {
+	border-left: 1px solid black;
+}
+
+.pTitle>a {
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	float: right;
+}
+
+
+/*产品列表*/
+.pList {
+	font-size: 0;
+}
+.pDetails ul li {
+	display: inline-block;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	width: 248px;
+	height: 300px;
+	font-size: 25px;
+	text-align: center;
+	line-height: 55px;
+}
+/***********************产品列表结束**************************/ 
