@@ -1,0 +1,19 @@
+
+/**reset**/
+* {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+
+
+/**header**/
+	/*背景设置*/
+.title {
+
+}
+
+.title > p {
+	width: 770px;
+}

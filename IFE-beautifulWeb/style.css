@@ -1,0 +1,24 @@
+
+/**reset**/
+* {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+
+
+/**header**/
+	/*背景设置*/
+.hea {
+	background-image: url(img/headerBackground.jpg);
+	height: 990px;
+}
+
+
+
+.ti {
+	width: 1170px;
+	margin: 0 auto;
+	
+}
