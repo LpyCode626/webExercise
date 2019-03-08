@@ -11,14 +11,17 @@
 /**header**/
 	/*背景设置*/
 .hea {
-	background-image: url(img/headerBackground.jpg);
+	background: url(img/headerBackground.jpg) center no-repeat;
+	background-size: cover;
 	height: 990px;
+	overflow: hidden;
 }
 
 
 
 .ti {
-	width: 1170px;
-	margin: 0 auto;
+	width: 800px;
+	margin: 210px auto;
+	background-color: red;
 	
 }
