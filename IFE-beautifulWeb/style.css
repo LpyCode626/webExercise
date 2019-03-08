@@ -10,18 +10,144 @@
 
 /**header**/
 	/*背景设置*/
-.hea {
+.headerContainer {
 	background: url(img/headerBackground.jpg) center no-repeat;
 	background-size: cover;
 	height: 990px;
 	overflow: hidden;
+	color: white;
+}
+	/*蒙版效果*/
+.headerBg {
+	background: rgba(0,0,0,.5);
+	height: 100%;
+	overflow: hidden;
+}
+	/*头部内容*/
+.headerContent {
+	margin: 210px auto;
+	width: 1200px;
+}
+	/*头部标题*/
+.headerContent > h2 {
+	font-size: 62px;
+}
+	/*头部描述*/
+.headerContent > p {
+	margin: 80px auto;
+	width: 700px;
+	color: #a8a6a3;
+	font-size: 20px;
 }
 
+	/*表单*/
+.contentForm {
+	width: 1000px;
+	border: rgba(255,255,255,.4) solid 2px;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+	/*表单标题*/
+.contentForm h3 {
+	margin-top: 60px;
+	font-size: 16px;
+}
+	/*表单描述*/
+.contentForm p {
+	color: #a8a6a3;
+	margin-top: 5px;
+	font-size: 16px;
+}
+	/*表单控件*/
+.formCss {
+	margin: 60px auto;
+}
 
+.formCss input {
+	height: 50px;
+	width: 300px;
+	border: rgba(255,255,255,.2) solid 2px;
+	border-radius: 3px;
+	background: rgba(0,0,0,0);
+	text-align: left;
+	padding-left: 10px;
+	color: white;
+	margin-right: 30px;
+	outline: none;
+}
 
-.ti {
-	width: 800px;
-	margin: 210px auto;
-	background-color: red;
+.formCss input:focus::-webkit-input-placeholder {
+	color: white;
+}
+
+.formCss button {
+	width: 130px;
+	height: 50px;
+	border: white solid 1px;
+	border-radius: 2px;
+	outline: none;
+}
+.formCss button:hover {
+	cursor: pointer;
+}
+.formCss button:active {
+	box-shadow: inset 
+}
+
+/*pageTwo*/
+.pageTwoContainer {
+	width: 1200px;
+	margin: 80px auto;
+	overflow: hidden;
 	
 }
+
+.pageTwoContainer::after {
+	content: "";
+	height: none;
+	display: hidden;
+	clear: both;
+}
+
+.pageTwoContainer h3 {
+	font-size: 14px; 
+}
+
+.pageTwoContainer h1 {
+	font-size: 42px; 
+	width: 770px;
+	margin: auto auto;
+}
+
+div[class = "pageTwoContent"] {
+	width: 600px;
+	margin: 50px 0;
+	float: left;
+}
+
+div[class = "pageTwoContent"] div:nth-child(2) {
+	float: right;
+}
+
+
+
+.pageTwoContent h4 {
+	text-align: left;
+	font-size: 20px;
+	margin-bottom: 5px;
+	margin-left: 60px;
+}
+
+.pageTwoContent p {
+	text-align: left;
+	font-size: 16px;
+	margin-left: 60px;
+	width: 400px;
+
+}
+
+.pageTwoContent img {
+	float: left;
+}
+	
+
