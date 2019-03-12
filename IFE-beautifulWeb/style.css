@@ -441,3 +441,136 @@ div[class = "pageTwoContent"] div:nth-child(2) {
 
 }
 
+
+	/*********joinFrom************/
+.joinForm {
+	width: 970px;
+	margin: 0 auto;
+}
+
+.formContent {
+	margin: 72px 0;
+	border: #d4d3d3 solid 1px;
+	border-radius: 5px;
+	padding: 50px;
+	width: 370px;	
+}
+
+.formContent input {
+	display: block;
+	width: 340px;
+	height: 50px;
+	margin-bottom: 30px;
+
+	border: #d4d3d3 solid 1px;
+	border-radius: 5px;
+	color: #d4d3d3;
+	padding-left: 20px;
+	text-align: left;
+	font-size: 14px;
+
+}
+
+.formContent textarea {
+	width: 340px;
+	height: 145px;
+	margin-bottom: 30px;
+
+	border: #d4d3d3 solid 1px;
+	border-radius: 5px;
+	color: #d4d3d3;
+	padding-left: 20px;
+	text-align: left;
+	font-size: 14px;
+	resize : none
+}
+
+.formContent button {
+	display: block;
+	width: 100%;
+	height: 50px;
+	outline: none;
+
+	background-color: black;
+	border: black solid 1px;
+	border-radius: 5px;
+	color: white;
+	font-size: 12px;
+}
+
+.formContent button:hover {
+	cursor: pointer;
+}
+
+.joinDesc {
+	margin-top: 150px;
+}
+
+.joinDesc h2 {
+	font-size: 42px;
+	text-align: left;
+
+	margin-bottom: 40px;
+}
+
+.joinDesc > p {
+	text-align: left;
+	font-size: 12px;
+	width: 370px;
+	margin-top: 40px;
+	margin-bottom: 75px;
+	color: #d4d3d3;
+
+}
+
+
+.joinDesc ul {
+	list-style: none;
+}
+
+.joinDesc ul li{
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.joinDesc ul li p {
+	text-align: left;
+}
+
+
+/*********footer************/
+.footerBg {
+	background-color: black;
+	color: white;
+}
+
+.footerContainer {
+	width: 1170px;
+	margin: 90px auto 90px;
+	display: inline-block;
+
+}
+
+.footContent td, .footContent th {
+	
+	width: 25%;
+	height: 50px;
+	text-align: left;
+	vertical-align: center;
+
+}
+
+.footContent tr td a {
+	font-size: 16px;
+	text-decoration: none;
+	color: white;
+}
+
+
+
+
+
+
+
+
