@@ -1,0 +1,172 @@
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.containerBg {
+	height: 1020px;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.nav {
+	width: 350px;
+	height: 100%;
+
+	display: flex;
+}
+
+	.navIcon {
+		width: 100px;
+		height: 1020px;
+		background-color: #1d2531;	
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;;
+		
+	}
+
+	.iconList li {
+		height: 60px;
+		width: 60px;
+		margin: 20px;
+		list-style: none;
+		position: relative;
+	}
+
+	
+
+	
+	.iconList li img{
+		border-radius: 50%;
+	}
+
+	.iconList img:hover {
+		cursor: pointer;
+	}
+
+
+	.iconList li::before {
+		content: "";
+		display: none;
+		height: 4px;
+		width: 3px;
+		background-color: #2399f1;
+		border-radius: 0 50% 50% 0;
+		box-shadow: 0 0 10px #2399f1;
+		position: absolute;
+		left: -20px;
+		top: 50%;
+		margin-top: -2px;
+	}
+
+	.iconList li:hover::before {
+		display: block;
+	}
+
+	.iconList li:active::before,
+	.iconList li:visited::before {
+		display: block;
+		background-color: red;
+	}
+
+
+
+	
+
+	.set {
+		height: 40px;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.set img {
+		height: 16px;
+		width: 16px;
+		
+	}
+
+	.set img:hover {
+		cursor: pointer;
+	}
+
+
+
+
+
+
+.navContentContainer {
+	width: 250px;
+	height: 100%;
+	background-color: black;
+	color: white;
+
+}
+
+	.navContent {
+		list-style: none;
+		padding: 25px 30px 0px;
+		
+	}
+
+	.navContent li{
+		margin-top: 20px;
+		font-size: 14px;
+		position: relative;
+	}
+	
+	.navContent li:first-child {
+		margin-top: 0;
+		margin-bottom: 30px;
+		font-size: 10px;
+	}
+
+	.navContent li::before {
+		content: "";
+		display: none;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -3px;
+
+		background-color: blue;
+	}
+
+
+	.navContent li:hover::before {
+		display: block;
+	}
+
+
+	.navContent:after {
+		content: "";
+		height: 1px;
+		background: white;
+		margin-top: 25px;
+		display: block;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content {
+	height: 1020px;
+	background-color: pink;
+	flex-grow: 1;
+}
