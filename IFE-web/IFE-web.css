@@ -8,15 +8,18 @@
 	height: 1020px;
 	display: -webkit-flex;
 	display: flex;
+
 }
 
+
+/***导航********/
 .nav {
 	width: 350px;
 	height: 100%;
-
+	display: -webkit-flex;
 	display: flex;
 }
-
+	/********一级导航，图标*************/
 	.navIcon {
 		width: 100px;
 		height: 1020px;
@@ -48,9 +51,9 @@
 	}
 
 
-	.iconList li::before {
+	.select::before {
 		content: "";
-		display: none;
+		display: block;
 		height: 4px;
 		width: 3px;
 		background-color: #2399f1;
@@ -62,20 +65,10 @@
 		margin-top: -2px;
 	}
 
-	.iconList li:hover::before {
-		display: block;
-	}
-
-	.iconList li:active::before,
-	.iconList li:visited::before {
-		display: block;
-		background-color: red;
-	}
 
 
 
-	
-
+	/****设置******/
 	.set {
 		height: 40px;
 		width: 100%;
@@ -97,59 +90,73 @@
 
 
 
-
+/*****2级导航****列表*/
 .navContentContainer {
 	width: 250px;
 	height: 100%;
-	background-color: black;
+	background-color: #222c3c;
 	color: white;
 
 }
 
 	.navContent {
 		list-style: none;
-		padding: 25px 30px 0px;
+		padding: 0px 30px 25px;
 		
 	}
 
 	.navContent li{
-		margin-top: 20px;
+
+
+		height: 35px;
+		/*margin-top: 20px;*/
+
 		font-size: 14px;
+		line-height: 35px;
 		position: relative;
 	}
 	
 	.navContent li:first-child {
 		margin-top: 0;
-		margin-bottom: 30px;
-		font-size: 10px;
+		font-size: 12px;
+		color: rgba(255,255,255,.2);
 	}
 
-	.navContent li::before {
+	.selectLi::before {
 		content: "";
-		display: none;
-		width: 6px;
-		height: 6px;
-		border-radius: 50%;
+		display: block;
+		height: 4px;
+		width: 3px;
+		background-color: #2399f1;
+		border-radius: 0 50% 50% 0;
+		box-shadow: 0 0 10px #2399f1;
+		position: absolute;
+		left: -30px;
+		top: 50%;
+		margin-top: -2px;
+	}
+
+	.mes::after {
+		content: "50";
+		display: block;
+		height: 25px;
+		width: 30px;
+		text-align: center;
+		line-height: 25px;
+		border-radius: 40%;
+		background-color: #1d94ed;
 
 		position: absolute;
-		left: 0;
+		right: 0;
 		top: 50%;
-		margin-top: -3px;
-
-		background-color: blue;
+		margin-top: -12px;
 	}
 
-
-	.navContent li:hover::before {
-		display: block;
-	}
-
-
-	.navContent:after {
+	.navContent:before {
 		content: "";
 		height: 1px;
-		background: white;
-		margin-top: 25px;
+		background: rgba(255,255,255,.2);
+		margin-bottom: 25px;
 		display: block;
 	}
 
@@ -167,6 +174,7 @@
 
 .content {
 	height: 1020px;
+	width: 100px;
 	background-color: pink;
 	flex-grow: 1;
 }
