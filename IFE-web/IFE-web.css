@@ -1,804 +1,180 @@
 
-/**************初始化*************/
 * {
 	padding: 0;
 	margin: 0;
 }
 
-html,
-body {
-	height: 100%;
-}
+.containerBg {
+	height: 1020px;
+	display: -webkit-flex;
+	display: flex;
 
-.clearFix::after {
-	content: " ";
-	height: 0;
-	display: block;
-	clear: both;
-}
-.clearFix {
-	zoom: 1;
-}
-
-/******网页整体*********/
-
-.content {
-	height: 100%;
 }
 
 
-/************导航栏************/
-.navContainer {			
+/***导航********/
+.nav {
 	width: 350px;
 	height: 100%;
-	background-color: yellow;
-
-	float: left;
+	display: -webkit-flex;
+	display: flex;
 }
-	/*************图片导航1级导航***************/
-	/*1级导航容器*/
+	/********一级导航，图标*************/
 	.navIcon {
-		height: 100%;
 		width: 100px;
-		background-color: #1d2531;
+		height: 1020px;
+		background-color: #1d2531;	
 
-		float: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;;
+		
+	}
 
+	.iconList li {
+		height: 60px;
+		width: 60px;
+		margin: 20px;
+		list-style: none;
 		position: relative;
 	}
-		/*图标导航列表*/
-		.messIcon {
-			width: 60px;
 
-			margin: auto 20px;
-
-			list-style-type: none;
-
-		}
-
-		.messIcon li a{
-			width: 60px;
-			height: 60px;
-			border-radius: 50%;
-			background-image: url(img/iconImg.png);
-			text-decoration: none;
-			margin-top: 20px;
-
-			display: block;
-		}
-
-		.messIcon li:nth-of-type(1) a {
-			background-color: #1c93ed;
-		}
-
-		.messIcon li:nth-of-type(2) a {
-			background-color: #907ae5;
-			background-position: 0 120px;
-		}
-
-		.messIcon li:nth-of-type(3) a{
-			background-color: #e8472b;
-			background-position: 0 bottom;
-		}
-
-		.messIcon li:last-child a{
-			background: none;
-			border: 2px solid rgba(255,255,255,.3);
-			text-align: center;
-			line-height: 56px;
-			font-size: 40px;
-			color: rgba(255,255,255,.3);
-
-
-		}
-		/*底部设置按钮列表*/
-		.setIcon {
-			width: 60px;
-			height: 60px;
-
-			margin: auto 20px;
-			position: absolute;
-			bottom: 0;
-
-			list-style-type: none;
-			text-align: center;
-
-		}
-		/*列表垂直对齐*/
-		.setIcon:before {
-			content: "";
-			display: inline-block;
-			height: 100%;
-			vertical-align: middle;
-		}
-
-		.setIcon li {
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		.setIcon li:first-child {
-			margin-right: 15px;
-		}
-
-		.setIcon li a {
-			display: block;
-			width: 16px;
-			height: 16px;
-			
-			background-image: url(img/setIcon.png);
-		}
-
-		.setIcon li:first-of-type a {
-			background-position: 0 -19px;
-		}
-	
 	
 
-
-
-
-
-	/*************信息导航2级导航***************/
-	/*2级导航容器*/
-	.navMess {
-		height: 100%;
-		width: 250px;
-		background-color: #222c3c;
-		
-		float: right;
-
-		position: relative;
-		overflow: hidden;
-		
-	}
-	/*超出滚动*/
-	.messListContainer {
-		width: calc(100% + 17px);
-		
-		position: absolute;
-		top: 0;
-		bottom: 60px;
-
-		overflow-y: scroll;
-		overflow-x: hidden;
+	
+	.iconList li img{
+		border-radius: 50%;
 	}
 
-	
-	/*列表目录*/
-	.messItme {
-		width: 196px;
-		margin: 0 auto;
-		margin-top: 30px;
+	.iconList img:hover {
+		cursor: pointer;
+	}
 
-		list-style-type: none;
-	}
-	
-	.messItme li {
-		margin-bottom: 20px;
-	}
-	
-	/*选项标题*/
-	.messItme li:first-child::after {
-		content: " ";
-		height: 0;
+
+	.select::before {
+		content: "";
 		display: block;
-		clear: both;
+		height: 4px;
+		width: 3px;
+		background-color: #2399f1;
+		border-radius: 0 50% 50% 0;
+		box-shadow: 0 0 10px #2399f1;
+		position: absolute;
+		left: -20px;
+		top: 50%;
+		margin-top: -2px;
 	}
 
-	.messItme li:first-child span{
-		font-size: 12px;
-		vertical-align: text-top;
-		color: rgba(255,255,255,.3);
+
+
+
+	/****设置******/
+	.set {
+		height: 40px;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
 	}
 
-	.messItme li:first-child a{
+	.set img {
 		height: 16px;
 		width: 16px;
-		background-image: url(img/setIcon.png);
 		
-		float: right;
-
-
 	}
 
-	.messItme li a {
-		text-decoration: none;
-		font-size: 14px;
-
-		color: #b7c0cd;
-	}
-	/*下划线*/
-	.underline::after {
-		content: " ";
-		width: 100%;
-		display: block;
-		border-bottom: 1px solid rgba(255,255,255,0.5);
-
+	.set img:hover {
+		cursor: pointer;
 	}
 
-	/*底部数据统计*/
-	.total {
-		height: 60px;
-		width: 196px;
-		
-		margin: auto 27px;
-		position: absolute;
-		bottom: 0;
-
-	}
-	/*统计文字*/
-	.total p {
-		margin-top: 10px;
-		color: white;
-		font-size: 14px;
-
-	}
-
-	.total p:after {
-		content: " ";
-		height: 0;
-		display: block;
-		clear: both;
-	}
-	.total p:after {
-		*zoom: 1;
-	}
-
-	.total p span {
-		float: right;
-	}
-
-	/*统计进图条*/
-	.progress {
-		width: 100%;
-		height: 4px;
-		border: 1px solid rgba(255,255,255,.3);
-		background-color: rgba(255,255,255,.3);
-		border-radius: 15px;
-
-		margin: auto 0;
-		margin-top: 15px;
-	}
-
-	.progress::after {
-		content: " ";
-		width: 40%;
-		height: 100%;
-		background-color: #8f76e4;
-		border-radius: 15px;
-		display: block;
-	}
-
-	
 
 
-/************消息栏************/
-.messageContainer {
+
+
+/*****2级导航****列表*/
+.navContentContainer {
+	width: 250px;
 	height: 100%;
-	width: calc(100% - 350px);
+	background-color: #222c3c;
+	color: white;
 
-	float: right;
 }
 
-/*信息标题*/
-.messageTitle {
-	width: 100%;
-	min-width: 910px;
-	height: 80px;
-}
-
-	/*标题*/
-	.messageTitle h1 {
-		font-size: 24px;
-		margin-left: 30px;
-		float: left;
-
-		line-height: 80px;
-
-	}
-
-	/*用户*/
-	.userMess {
-		margin: 11px 0;
-		margin-right: 40px;
-		float: right;
-	}
+	.navContent {
+		list-style: none;
+		padding: 0px 30px 25px;
 		
-		/*用户图片*/
-		.userImg {
-			display: inline-block;
-			vertical-align: middle;	
-			position: relative;
-		}
+	}
 
-		.userImg img {
-			border-radius: 50%;
-			text-align: center;
-			vertical-align: middle;
-			
-		}
-		.userImg span {
-			display: block;
-			height: 5px;
-			width: 5px;
-			border: 2px solid #38a76a;
-			border-radius: 50%;
-			box-shadow: 0 0 0 2px white;
-			background-color: white;
+	.navContent li{
 
 
-			position: absolute;
-			right: 6px;
-			bottom: 6px;
-		}
+		height: 35px;
+		/*margin-top: 20px;*/
 
-		/*用户名称*/
-		.userIfon {
-			vertical-align: middle;
-			height: 58px;
-			
-			display: inline-block;
-		}
-		.userIfon p {
-			line-height: 29px;
-		}
+		font-size: 14px;
+		line-height: 35px;
+		position: relative;
+	}
+	
+	.navContent li:first-child {
+		margin-top: 0;
+		font-size: 12px;
+		color: rgba(255,255,255,.2);
+	}
 
-		.userIfon #userId {
-			font-size: 16px;
-			color: #2399f1;
-			font-weight: bold;
-		}
-		.userIfon #userLevel {
-			font-size: 14px;
-			color: #b5b5b5;
-		}
-		/*下拉列表*/
-		.userMess a {
-			display: inline-block;
-			width: 6px;
-			height: 6px;
-			margin-left: 20px;
-			border-right: 1px solid #b5b5b5;
-			border-bottom: 1px solid #b5b5b5;
+	.selectLi::before {
+		content: "";
+		display: block;
+		height: 4px;
+		width: 3px;
+		background-color: #2399f1;
+		border-radius: 0 50% 50% 0;
+		box-shadow: 0 0 10px #2399f1;
+		position: absolute;
+		left: -30px;
+		top: 50%;
+		margin-top: -2px;
+	}
 
-			transform: rotate(45deg);
+	.mes::after {
+		content: "50";
+		display: block;
+		height: 25px;
+		width: 30px;
+		text-align: center;
+		line-height: 25px;
+		border-radius: 40%;
+		background-color: #1d94ed;
 
-		}
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -12px;
+	}
 
-/*信息主体*/
-.messageBody {
-	width: 100%;
-	height: calc(100% - 80px);
+	.navContent:before {
+		content: "";
+		height: 1px;
+		background: rgba(255,255,255,.2);
+		margin-bottom: 25px;
+		display: block;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content {
+	height: 1020px;
+	width: 100px;
+	background-color: pink;
+	flex-grow: 1;
 }
-	/*联系人*/
-	.linkMan {
-		width: 398px;
-		height: calc(100% - 1px);
-
-		float: left;
-		border-top: 1px solid #e6e9ec;
-		border-right: 1px solid #e6e9ec;
-
-		position: relative;
-	}
-		/*查询*/
-		.search {
-			width: 340px;
-			height: 70px;
-
-			text-align: center;
-			margin: 0 auto;
-			position: relative;
-		}
-			/*查询框*/
-			.search > input {
-				 height: 34px;
-				 width: calc(100% - 20px);
-				 border: 1px solid #e6e9ec;
-				 border-radius: 10px;
-				 outline: none;
-				
-
-				 margin-top: 17px;
-				 padding-left: 20px;
-			}
-			/*查询按钮*/
-			.search > button {
-				height: 16px;
-				width: 16px;
-				background-image: url(img/setIcon.png);
-				background-position: 0 bottom;
-				background-color: transparent;
-				border: none;
-				outline: none;
-
-				position: absolute;
-				right: 8px;
-				top: 50%;
-				margin-top: -8px;
-			}
-
-		/*联系人列表*/
-		.linkManListContainer {
-			width: 100%;
-			border-top: 1px solid #e6e9ec;
-
-			position: absolute;
-			top: 70px;
-			bottom: 0;
-
-			overflow: hidden;
-		}
-			.linkManLists {
-				width: calc(100% + 17px);
-				height: 100%;
-
-				overflow-y: scroll;
-				overflow-x: hidden;
-			}
-			
-			.linkManLists > li {
-				list-style: none;
-				height: 130px;
-				width: 348px;
-
-				border-left: 3px solid transparent;
-				border-bottom: 1px solid #e6e9ec;
-				padding-left: 27px;
-				padding-right: 20px;
-
-				overflow: hidden;
-			}
-			
-				/*联系人信息*/
-				.linkManInfo {
-					margin: 15px 0;
-
-				}
-
-				.linkManInfo img {
-					height: 46px;
-					width: 46px;
-					border-radius: 50%;
-
-					float: left;
-				}
-
-				.linkManInfo ul {
-					float: left;
-					margin-left: 20px;
-				}
-				
-				.linkManInfo ul li {
-					list-style: none;
-					line-height: 23px;	
-				}
-
-				.linkManInfo ul li:first-child {
-					font-weight: bold;
-					font-size: 16px;
-				}
-				.linkManInfo ul li:last-child {
-					font-size: 14px;
-					color: #c9c9c9;
-				}
-
-				.linkManInfo span {
-					line-height: 46px;
-					color: #c9c9c9;
-
-					float: right;
-				}
-
-				/*联系人消息*/
-				.linkManLists > li p {
-					font-size: 14px;
-				}
-				
-				/*选定样式*/
-				.linkManLists .selectLink {
-					border-left-color: #00aaff;
-				}
-
-				.selectLink div ul li:first-child {
-					color: #00aaff;
-					position: relative;
-				}
-				.selectLink div ul li:first-child::before {
-					content: " ";
-					display: inline-block;
-					width: 10px;
-					height: 10px;
-					border-radius: 50%;
-					background-color: #00aaff;
-
-					line-height: 14px;
-					margin-right: 6px;
-
-				}
-
-				/*新消息*/
-				.newMess {
-					position: relative;
-				}
-
-				.newMess p{
-					height: 38px;
-					width: 300px;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					display:-webkit-box; 
-					-webkit-box-orient:vertical;
-					-webkit-line-clamp:2; 
-				}
-				
-				.newMess::after {
-					display: block;
-					content: "5";
-					width: 26px;
-					height: 26px;
-					border-radius: 50%;
-					background-color: #2ba0f7;
-
-					position: absolute;
-					right: 20px;
-					bottom: 22px;
-					text-align: center;
-					line-height: 26px;
-
-					color: white;
-					font-weight: block;
-				}
-
-	/*消息列表*/
-	.message {
-		height: 100%;
-		width: calc(100% - 400px);
-
-		float: left;
-
-		position: relative;
-	}
-		/*分页	*/
-		.messTitle {
-			width: 100%;
-			min-width: 520px;
-			height: 30px;
-			border-top: 1px solid #e6e9ec;
-			border-bottom: 1px solid #e6e9ec;
-			padding: 19px 0;
-		}
-			/*在线状态*/
-			.messTitle > span {
-				margin-left: 30px;
-				font-size: 18px;
-				line-height: 30px;
-			}
-
-			.messTitle > span::after {
-				display: inline-block;
-				content: " ";
-				width: 10px;
-				height: 10px;
-				border-radius: 50%;
-				background-color: green;
-
-				margin-left: 20px;
-				margin-bottom: 3px;
-			}
-			/*分页导航*/
-			.paging {
-				float: right;
-			}
-
-			.paging ul {
-				border: 1px solid #ced0da;
-				border-radius: 10px;
-				float: left;
-				overflow: hidden;
-			}
-			.paging ul li {
-				list-style: none;
-
-				float: left;
-				
-			}
-
-			.paging button {
-				border: none;
-				outline: none;
-				height: 30px;
-				width: 36px;
-				vertical-align: middle;
-				background-color: #fcfcfd;
-				background-image: url(img/messmangeIcon.png);
-				cursor: pointer;
-			}
-
-			/*信息管理图标*/
-			.messManges {
-				margin-right: 30px;
-			}
-			
-			
-			.messManges li:nth-of-type(2) {
-				border-left: 1px solid #ced0da;
-				border-right: 1px solid #ced0da;
-				background-color: yellow;
-			}
-
-			.messManges li:nth-of-type(2) button {
-					background-position: 0 -30px;
-			}
-
-			.messManges li:nth-of-type(3) button {
-					background-position: 0 -60px;
-			}
-
-			/*分页图标*/
-			.pageSearch {
-				margin-right: 20px;
-			}
-
-			.pageSearch li:first-child {
-				border-right: 1px solid #ced0da;
-			}
-
-			.pageSearch li button {
-				background: #fcfcfd;
-				position: relative;
-			}
-
-			.pageSearch li button::after {
-				content: "";
-				display: block;
-				width: 0;
-				height: 0;
-				border-left: 6px solid #ced0da;
-				border-top: 6px solid transparent;
-				border-bottom: 6px solid transparent;
-
-				position: relative;
-				left: 50%;
-				margin-left: -3px;
-			}
-
-			.pageSearch li:first-child button::after {
-				transform: rotate(180deg);
-			}
-
-
-			
-				
-			/*页数统计	*/
-			.paging span {
-				float: left;
-				border: 2px solid transparent;
-				border-left: 1px solid rgba(0,0,0,.5);
-				padding-left: 20px;
-				padding-right: 15px;
-
-				font-size: 14px;
-			}
-			.paging input {
-				border: none;
-				outline: none;
-				padding: 0;
-				line-height: 28px;
-				width: 25px;
-				text-align: center;
-			}
-
-
-
-
-
-		/*消息内容*/
-		.messContent {
-			width: 100%;
-			min-width: 520px;
-			position: absolute;
-			top: 70px;
-			bottom: 90px;
-			
-			overflow: hidden;
-
-		}
-			/*用户图片*/
-
-			.messlists {
-				width: calc(100% + 17px);
-				height: 100%;
-				overflow-y: scroll;
-				overflow-x: hidden;
-			}
-
-			.messitem {
-				margin-top: 30px;
-				position: relative;
-				overflow: hidden;
-			}
-
-			.messitem img {
-				height: 46px;
-				width: 46px;
-				border-radius: 50%;
-				
-				margin-left: 30px;
-				float: left;
-			}
-			
-			.messitem div {
-				width: calc(100% - 100px);
-				margin-left: 20px;
-				float: left;
-
-				font-size: 14px;
-			}
-
-			.messitem span:first-child {
-				font-size: 16px;
-				font-weight: bold;
-				margin-right: 10px;
-			}
-
-			.messitem p {
-				margin-top: 10px;
-				/*max-width: 750px;*/
-				margin-right: 30px;
-			}
-			
-			/*分隔符*/
-			/*.hostMess::before {
-				content: "";
-				display: block;
-				width: 100%;
-				height: 0;
-				border-bottom: 1px solid rgba(0,0,0,.5);
-
-				position: absolute;
-				bottom: 0;
-				margin-top: 20px;
-			}*/
-			
-
-
-
-		/*消息发送*/
-		.sendMess {
-			width: 100%;
-			height: 90px;
-			min-width: 520px;
-			position: absolute;
-			bottom: 0;
-
-		}
-			.sendMess form {
-				height: 50px;
-				width: calc(100% - 60px);
-				margin: auto 30px;
-				margin-top: 20px;
-
-				border: 1px solid #9fa9ba;
-				border-radius: 10px;
-				overflow: hidden;
-			}
-
-			.sendMess button {
-				border: none;
-				height: 100%;
-				width: 50px;
-				font-size: 50px;
-				line-height: 50px;
-				border-right: 2px solid #9fa9ba;
-				float: left;
-				color: #9fa9ba;
-			}
-
-			.sendMess input {
-
-				line-height: 50px;
-				width: calc(100% - 50px);
-				border: none;
-			}
